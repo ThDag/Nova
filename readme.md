@@ -28,3 +28,7 @@ Psychology defines personality as a set of patterns visible in thinking, feeling
 First of all, Alice is going to help relieve barriers associated with the stigma of accessing psychological health services and geographical barriers in face-to-face counseling. It will provide instant information 24/7 and serve exceptionally well for those working unconventional shifts.
 
 Users enjoy the anonymity offered by chatbots, as they may be more likely to disclose sensitive information to a chatbot than to a human therapist (according to a recent study).
+
+### Cost Savings:
+Alice will also offer cost savings in the form of travel expenses and telephone charges for patients. As for practitioners, they can focus on people in critical condition and work with health data uncovered by AI, which implies more efficiency.
+
