@@ -24,3 +24,7 @@ In our research team i am currently developing a conversational psychologist-cha
 Psychology defines personality as a set of patterns visible in thinking, feeling, and behaving that distinguish an individual from others. The personality represents itself through consistent and repeatable behavior. 
 
 ## Advantages:
+### Accessibility:
+First of all, Alice is going to help relieve barriers associated with the stigma of accessing psychological health services and geographical barriers in face-to-face counseling. It will provide instant information 24/7 and serve exceptionally well for those working unconventional shifts.
+
+Users enjoy the anonymity offered by chatbots, as they may be more likely to disclose sensitive information to a chatbot than to a human therapist (according to a recent study).
