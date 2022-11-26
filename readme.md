@@ -11,3 +11,5 @@ VSCode, Git, GitHub, Python, HTML, CSS, JavaScript, Google.
 
 # Contributors:
 Gideon Ogunbanjo
+
+## Extended Description:
