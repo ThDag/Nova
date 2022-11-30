@@ -34,4 +34,4 @@ Alice will also offer cost savings in the form of travel expenses and telephone 
 
 ### How It'll Work:
 Before starting to create the chatbot, it is necessary to consider what type of virtual agent we want to program andfor what purpose. In my case, i will present the necessary elements to build a chatbot aimed at performing preliminary psychological assessment tasks, although it is true that the concepts and steps we will describe could be generalized to robots with similar functions.
-![alt text](https://github.com/[gideon-ogunbanjo]/[Alice]/img/[main]/image.png?raw=true)
+![alt text](https://github.com/[gideon-ogunbanjo]/[Alice]/blob/[main]/image.png?raw=true)
