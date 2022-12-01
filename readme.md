@@ -7,7 +7,7 @@ Generally, a chatbot is the software that simulates human-like conversations wit
 Alice is an AI-powered psychological chatbot, specifically developed to understand people.
 
 The core of the bot is represented by a huge dataset of the most reliable personality tests. The input data is processed in such a way that you get both your personal result and its comparison with other people’s results. For example, if your score on extraversion is 60% it means that you are more extraverted than 60% of the population.
-Another function of Alice makes it really outstanding – it is able to understand and process human language when it comes to describing personality. So, if you ask the bot questions about yourself, it can make some predictions on your personality traits.
+Another function of Alice makes it really outstanding – it will be able to understand and process human language when it comes to describing personality. So, if you ask the bot questions about yourself, it can make some predictions on your personality traits.
 This chatbot will be able to evaluate, and diagnose people with psychological trauma and either encourage them to see the therapist closest to their location, or provide advice and support to the user depending on the situation they're in. I'm looking to make Alice able to make phone calls when neccessary and also maybe adding augumented reality to make it seem like you're talking to an actual person through your phone or VR goggles.
 
 ### Date Created:
