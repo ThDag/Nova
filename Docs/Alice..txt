@@ -1,10 +1,10 @@
 ﻿Intellivo AI
-Alice.
+Alice.        
 November 01, 2023.
 Product Overview  
 
 
-Alice is a conversational chatbot I'm developing for psychological evaluations. This chatbot will be able to converse, evaluate and diagnose people with psychological trauma and either encourage them to see the psychologist or therapist closest to their location or provide advice and support to the user depending on the situation they're in. I'm looking to make Alice able to make phone calls when necessary and also maybe add augmented reality to make it seem like you're talking to an actual person through your mobile device, laptop, or VR goggles.
+Alice is a conversational chatbot I'm developing for psychological evaluations. This chatbot will be able to converse, evaluate and diagnose people with `psychological trauma and either encourage them to see the psychologist or therapist closest to their location or provide advice and support to the user depending on the situation they're in. I'm looking to make Alice able to make phone calls when necessary and also maybe add augmented reality to make it seem like you're talking to an actual person through your mobile device, laptop, or VR goggles.
 Inspiration
 I decided to build this project back in 2020 while still in high school after watching a documentary on BBC about the number of mentally unstable people living in a particular area after study. It was stated that most of them knew they needed psychological evaluations but later discovered that they disregarded them because they found it uncomfortable speaking with a person or group of people about their problems. That made me come up with the concept of Alice!
 
@@ -52,6 +52,48 @@ Once the user has completed the interview with Alice, it will be stored on a sec
 The information collected by Alice may be useful in deciding which professional to assign the case to within a team of psychologists. This work will be streamlined thanks to the when tool since it will not be necessary to spend time personally evaluating each case. Likewise, the situation will be avoided when the user starts therapy with a therapist other than the one who made the initial assessment. It must be said that the therapist assigned to the case will have the information collected by the chatbot, which will facilitate the analysis of the problem and the preparation of the face-to-face sessions. If this tool is used by one professional alone, the information collected will also help to plan the assessment and even make the first approach to explaining the problem.
 5. Interdisciplinary Development:
 From everything described above, it can be noted that collaboration among psychologists, computer engineers, and linguists is vital. Psychologists are responsible for indicating what the chatbot’s questions should be and the type of information that should be collected. In addition, they are responsible for pointing out the situations that require priority referral to a human psychologist or even, more specifically, to a specialized emergency service (e.g., the user presents suicidal ideation and a set plan). The engineers and linguists are responsible for designing and building the chatbot so that it can understand the user (identifying certain words in the text or voice input), guide the conversation, interact with language that is as natural as possible, etc. 
+
+
+Chatbot Stakeholders:
+
+
+Role
+	Web Shopping Helper
+	Healthcare
+	End User (the people interacting with the chatbots)
+	Online Shopper
+	Patient
+	Developers (creators of the chatbots)
+	Software Engineer
+	Researcher/ Software Engineer
+	Principal (the people who the chatbots are working on behalf of)
+	Store Owner
+	Psychologist
+	Agent (the people who are working on behalf of the principal)
+	3rd Party Customer Service Agent
+	Graduate Student
+	In this research, we reflect on the Quality of Experience (QoE) for the stakeholders involved with chatbots. QoE is defined as the degree of delight or annoyance of the user of an application or service. From a QoE perspective, we can define the QoE for each stakeholder of a healthcare chatbot as follows:
+
+
+* End user: The satisfaction level for the patient (study participant) will be proportional to how the chatbot responds to irrelevant inputs by users. A Psychologist Chatbot Developing Experience 3 experience (UX) also affects the overall QoE for the end-user such as the use of buttons and dropdown menus. QoE is affected by the ease of engagement as well, e.g using Messenger rather than a custom app to be downloaded separately.
+*  Psychologist: The chatbot will result in the same information being collected as would result from questionnaires/ clinical interviews but with less effort and a more natural environment for subjects to provide more reliable answers and engagement. All results are captured and stored electronically so they can be analyzed and studied easily. 
+* Developer: The ease of deployment and integration to multiple messaging channels while maintaining the desired level of functionality. 
+* Agent: The graduate student role has changed from clinical data capture via questionnaire to software development. Their QoE will result from the ease of system development and data presentation.
+Dialog Flow:
+Chatbots platforms, including dialog flow, use a common terminology relating to dialogue management.
+* Intent: is what the idea or message that the users want to convey to the chatbot. Based on interpreting a user input the chatbot sends a reply or performs an action. For instance, a user may indicate a wish to pause a conversation and continue again at a defined time. In such an instance, the chatbot should reply with a confirmation if the time is valid, or ask for valid input otherwise.
+  
+[a]
+* Entity: is a piece of information that has a specific meaning within a user utterance. For example, the user may write Let’s chat at 12:00, in this case the time, 12:00, is an entity. 
+* Context: is the glue that holds multiple intents together. It is used to put them within the same conversational space. The intents within the same context are matched first before searching all other intents. For instance, the same keywords (yes/no) can be used multiple times, but the intent is chosen based on the relevant context. Figure 2 shows that for the same response Yeah two different replies can be sent to the user based on the context: Jokes or Rules. 
+* Fulfilment: is used when further processing is needed to provide a function other than a simple reply message, for example, accessing a database.
+System Architechture:
+  
+
+* Dialogflow is the core component of the implementation, where all the NLP, intent classification, and entity extraction algorithms are taking place. 
+* Firebase is where functions are implemented based on the requirement for every single intent, for instance accessing a database to write or retrieve data. Also, these functions are used for input verification, for instance, the rating of an action should take an integer value between 1 - 5.
+* Database is implemented in Firestore [7], a cloud-based NoSQL. 
+* Scheduler Service is a time-based job scheduler service called cron, responsible for scheduling the time to send the next daily message to the participants at their selected times to engage in a followup conversation. – Messenger is the selected messaging platform where a user interacts with the Chatbot.
 Limitations:
 * Alice might be sensitive to changes in the wording of inputs and may provide different answers depending on the exact phrasing of a question. For instance, she may not know the answer to a question when asked one way, but be able to answer correctly when the same question is rephrased slightly.
 * Instead of asking clarifying questions when faced with an ambiguous query, current large language models like Alice often try to guess what the user intended. This can sometimes lead to incorrect or misleading answers. Ideally, these models would be able to ask for clarification in such situations to improve the accuracy of their responses.
@@ -66,3 +108,6 @@ ________________
 [1] References: 
 How to Create a Psychologist Chatbot
                A Psychologist Chatbot Developing Experience
+[a]Communication Flowchart in Dialogflow. The light blue box is user interaction
+through the messaging platform, light green boxes are dialogflow managed actions and
+light yellow boxes are custom implemented functionality
