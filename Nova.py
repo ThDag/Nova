@@ -33,3 +33,7 @@ if __name__ == "__main__":
     ai = ChatBot(name="Nova")
     while True:
         ai.speech_to_text()
+
+# Ensuring that the chatbot will be activated by speaking its name
+def wake_up(self, text):
+    return True if self.name in text.lower() else False
