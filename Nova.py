@@ -1,21 +1,14 @@
 import numpy as np
 import speech_recognition as sr
 
-
 # Initializing the Ai
 
 class ChatBot():
     def __init__(self, name):
         print("----- starting up", name, "Nova")
         self.name = name
-        
-# Executing Nova
-
-if __name__ == "__main__":
-    ai = ChatBot(name="Nova")
+    # Setting up the Speech recognition system
     
-# Setting up the Speech recognition section
-
     def speech_to_text(self):
         recognizer = sr.Recognizer()
         with sr.Microphone() as mic:
@@ -26,9 +19,7 @@ if __name__ == "__main__":
             print("me --> ", self.text)
         except:
             print("me -->  ERROR")
-
-# Executing and testing the speech recognition system
-
+# Executing Nova
 if __name__ == "__main__":
     ai = ChatBot(name="Nova")
     while True:
