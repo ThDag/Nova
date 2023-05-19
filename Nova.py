@@ -28,3 +28,13 @@ if __name__ == "__main__":
 # Ensuring that the chatbot will be activated by speaking its name
 def wake_up(self, text):
     return True if self.name in text.lower() else False
+
+from gtts import gTTS
+import os
+@staticmethod
+def text_to_speech(text):
+    print("AI --> ", text)
+    speaker = gTTS(text=text, lang="en", slow=False)
+    speaker.save("res.mp3")
+    os.system("afplay res.mp3")
+    os.remove("res.mp3")
