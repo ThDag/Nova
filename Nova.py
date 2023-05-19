@@ -28,7 +28,7 @@ if __name__ == "__main__":
 # Ensuring that the chatbot will be activated by speaking its name
 def wake_up(self, text):
     return True if self.name in text.lower() else False
-
+# giving Nova the ability to recognize its name
 from gtts import gTTS
 import os
 @staticmethod
@@ -38,3 +38,12 @@ def text_to_speech(text):
     speaker.save("res.mp3")
     os.system("afplay res.mp3")
     os.remove("res.mp3")
+
+if __name__ == "__main__":
+     ai = ChatBot(name="Dev")
+     while True:
+         ai.speech_to_text()
+         ## wake up
+         if ai.wake_up(ai.text) is True:
+             res = "Hello I am Nova your AI, what can I do for you?"
+         ai.text_to_speech(res)
