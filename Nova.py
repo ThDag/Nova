@@ -5,7 +5,7 @@ import speech_recognition as sr
 
 class ChatBot():
     def __init__(self, name):
-        print("----- starting up", name, "Nova")
+        print("----- Initializing", name)
         self.name = name
     # Setting up the Speech recognition system
     
