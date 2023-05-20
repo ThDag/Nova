@@ -55,8 +55,7 @@ import datetime
 @staticmethod
 def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
-#and run the script after adding the above function to the AI class
-# Run the AI
+# Running the AI
 if __name__ == "__main__":
     ai = ChatBot(name="Nova")
     while True:
@@ -74,3 +73,6 @@ if __name__ == "__main__":
                     "no problem!","cool!",
                     "I'm here if you need me!"])
             ai.text_to_speech(res)
+
+
+# Task 4: Incorporating Artificial Intelligence - Natural Language Processing
