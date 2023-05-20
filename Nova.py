@@ -1,7 +1,9 @@
 import numpy as np
 import speech_recognition as sr
 import transformers
-
+import datetime
+from gtts import gTTS
+import os
 # Initializing the Ai
 
 class ChatBot():
@@ -31,8 +33,7 @@ def wake_up(self, text):
     return True if self.name in text.lower() else False
 
 # Task 2: Giving Nova the ability to recognize its name
-from gtts import gTTS
-import os
+
 @staticmethod
 def text_to_speech(text):
     print("AI --> ", text)
@@ -52,7 +53,6 @@ if __name__ == "__main__":
          
          
 # Task 3: Enabling Nova to provide the current time when asked by the user
-import datetime
 @staticmethod
 def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
