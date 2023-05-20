@@ -1,5 +1,6 @@
 import numpy as np
 import speech_recognition as sr
+import transformers
 
 # Initializing the Ai
 
@@ -41,7 +42,7 @@ def text_to_speech(text):
     os.remove("res.mp3")
 
 if __name__ == "__main__":
-     ai = ChatBot(name="Dev")
+     ai = ChatBot(name="Nova")
      while True:
          ai.speech_to_text()
          ## wake up
@@ -56,23 +57,33 @@ import datetime
 def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
 # Running the AI
+# Task 4: Adding Natural Language Processing
 if __name__ == "__main__":
     ai = ChatBot(name="Nova")
-    while True:
-            ai.speech_to_text()
-            ## waking up
-            if ai.wake_up(ai.text) is True:
-                res = "Hello I am Nova the AI, what can I do for you?"
-            ## performing any action
-            elif "time" in ai.text:
-                res = ai.action_time()
-            ## responding politely
-            elif any(i in ai.text for i in ["thank","thanks"]):
-                res = np.random.choice(
-                    ["you're welcome!","anytime!",
-                    "no problem!","cool!",
-                    "I'm here if you need me!"])
-            ai.text_to_speech(res)
-
-
-# Task 4: Incorporating Artificial Intelligence - Natural Language Processing
+    nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium")
+    os.environ["TOKENIZERS_PARALLELISM"] = "true"
+    ex=True
+    while ex:
+        ai.speech_to_text()
+        ## wake up
+        if ai.wake_up(ai.text) is True:
+            res = "Hello I am Nova, what can I do for you?"
+        ## action time
+        elif "time" in ai.text:
+            res = ai.action_time()
+        ## respond politely
+        elif any(i in ai.text for i in ["thank","thanks"]):
+            res = np.random.choice(["you're welcome!","anytime!","no problem!","cool!","I'm here if you need me!","mention not"])
+        elif any(i in ai.text for i in ["exit","close"]):
+            res = np.random.choice(["Tata","Have a good day","Bye","Goodbye","Hope to meet soon","peace out!"])
+            ex=False
+        ## conversation
+        else:   
+            if ai.text=="ERROR":
+                res="Sorry, come again?"
+            else:
+                chat = nlp(transformers.Conversation(ai.text), pad_token_id=50256)
+                res = str(chat)
+                res = res[res.find("bot >> ")+6:].strip()
+        ai.text_to_speech(res)
+    print("----- Shutting Down-----")
