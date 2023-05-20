@@ -6,7 +6,7 @@ from gtts import gTTS
 import os
 # Initializing the Ai
 
-class ChatBot():
+class Bot():
     def __init__(self, name):
         print("----- Initializing", name)
         self.name = name
@@ -24,11 +24,11 @@ class ChatBot():
             print("me -->  ERROR")
 # Executing Nova
 if __name__ == "__main__":
-    ai = ChatBot(name="Nova")
+    ai = Bot(name="Nova")
     while True:
         ai.speech_to_text()
 
-# Task 1: Ensuring that the chatbot will be activated by speaking its name
+# Task 1: Ensuring that the bot will be activated by speaking its name
 def wake_up(self, text):
     return True if self.name in text.lower() else False
 
@@ -43,7 +43,7 @@ def text_to_speech(text):
     os.remove("res.mp3")
 
 if __name__ == "__main__":
-     ai = ChatBot(name="Nova")
+     ai = Bot(name="Nova")
      while True:
          ai.speech_to_text()
          ## wake up
@@ -59,7 +59,7 @@ def action_time():
 # Running the AI
 # Task 4: Adding Natural Language Processing
 if __name__ == "__main__":
-    ai = ChatBot(name="Nova")
+    ai = Bot(name="Nova")
     nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium")
     os.environ["TOKENIZERS_PARALLELISM"] = "true"
     ex=True
