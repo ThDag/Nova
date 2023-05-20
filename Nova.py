@@ -32,8 +32,8 @@ if __name__ == "__main__":
 def wake_up(self, text):
     return True if self.name in text.lower() else False
 
-# Task 2: Giving Nova the ability to recognize its name
 
+# Task 2: Giving Nova the ability to recognize its name
 @staticmethod
 def text_to_speech(text):
     print("AI --> ", text)
@@ -56,8 +56,9 @@ if __name__ == "__main__":
 @staticmethod
 def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
-# Running the AI
-# Task 4: Adding Natural Language Processing
+
+
+# Task 4: Incorporating Natural Language Processing
 if __name__ == "__main__":
     ai = Bot(name="Nova")
     nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium")
@@ -71,11 +72,11 @@ if __name__ == "__main__":
         ## action time
         elif "time" in ai.text:
             res = ai.action_time()
-        ## respond politely
+        ## polite response
         elif any(i in ai.text for i in ["thank","thanks"]):
-            res = np.random.choice(["you're welcome!","anytime!","no problem!","cool!","I'm here if you need me!","mention not"])
+            res = np.random.choice(["you're welcome!","anytime!","no problem!","cool!","I'm here if you need me!"])
         elif any(i in ai.text for i in ["exit","close"]):
-            res = np.random.choice(["Tata","Have a good day","Bye","Goodbye","Hope to meet soon","peace out!"])
+            res = np.random.choice(["Have a good day","Bye","Goodbye","Hope to meet soon","peace out!"])
             ex=False
         ## conversation
         else:   
