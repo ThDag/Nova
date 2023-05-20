@@ -18,8 +18,7 @@ Nova is equipped with the ability to remember names mentioned during conversatio
 Nova offers a range of additional features to enhance user interactions and provide valuable functionality. Some of these features include:
 
 - Weather Information: Nova can retrieve current weather conditions based on user input.
-- Wikipedia Search: Nova can perform searches on Wikipedia and provide relevant information.
-- News Updates: Nova can fetch the latest news headlines and summaries from various sources.
+
 
 
 ### Usage Tips
