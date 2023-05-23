@@ -79,7 +79,7 @@ def Gen_report(C):
         T = "Error Occurred"
     print(T)
     
-Gen_report(C)
+Gen_report()
 
 
 # Task 4: Incorporating Natural Language Processing
