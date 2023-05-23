@@ -59,27 +59,27 @@ def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
 
 
-# # Task 3.1: Enabling Nova to tell and predict the weather
-# @staticmethod
-# def Gen_report(C):
-#     recognizer = sr.Recognizer()
-#     with sr.Microphone() as mic:
-#         print("listening...")
-#         audio = recognizer.listen(mic)
-#         try:
-#             C.text = recognizer.recognize_google(audio)
-#             print("me --> ", C.text)
-#         except:
-#             print("me -->  ERROR")
-#     url = 'https://wttr.in/{}'.format(C)
-#     try:
-#         data = requests.get(url)
-#         T = data.text
-#     except:
-#         T = "Error Occurred"
-#     print(T)
+# Task 3.1: Enabling Nova to tell and predict the weather
+@staticmethod
+def Gen_report(C):
+    recognizer = sr.Recognizer()
+    with sr.Microphone() as mic:
+        print("listening...")
+        audio = recognizer.listen(mic)
+        try:
+            C.text = recognizer.recognize_google(audio)
+            print("me --> ", C.text)
+        except:
+            print("me -->  ERROR")
+    url = 'https://wttr.in/{}'.format(C)
+    try:
+        data = requests.get(url)
+        T = data.text
+    except:
+        T = "Error Occurred"
+    print(T)
     
-# Gen_report(C)
+Gen_report(C)
 
 
 # Task 4: Incorporating Natural Language Processing
