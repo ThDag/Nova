@@ -12,6 +12,9 @@ class Bot():
         print("----- Initializing", name)
         self.name = name
     # Setting up the Speech recognition system
+    """ 
+--- Standard Feature ---
+    """
     
     def speech_to_text(self):
         recognizer = sr.Recognizer()
@@ -35,6 +38,9 @@ def wake_up(self, text):
 
 
 # Task 2: Giving Nova the ability to recognize its name
+""" 
+--- Standard Feature ---
+"""
 @staticmethod
 def text_to_speech(text):
     print("AI --> ", text)
@@ -60,6 +66,9 @@ def action_time():
 
 
 # Task 3.1: Enabling Nova to tell and predict the weather
+""" 
+--- Test Feature ---
+"""
 @staticmethod
 def Gen_report(C):
     recognizer = sr.Recognizer()
@@ -83,6 +92,9 @@ Gen_report()
 
 
 # Task 4: Incorporating Natural Language Processing
+""" 
+--- Standard Feature ---
+"""
 if __name__ == "__main__":
     ai = Bot(name="Nova")
     nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium")
