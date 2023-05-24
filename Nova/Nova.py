@@ -5,16 +5,16 @@ import datetime
 from gtts import gTTS
 import os
 import requests
-# Initializing the Ai
+# Initializing the AI
 
+""" 
+---Feature 1. Speech Recognition Feature ---
+"""
 class Bot():
     def __init__(self, name):
         print("----- Initializing", name)
         self.name = name
-    # Setting up the Speech recognition system
-    """ 
---- Speech Recognition Feature ---
-    """
+
     
     def speech_to_text(self):
         recognizer = sr.Recognizer()
@@ -32,14 +32,14 @@ if __name__ == "__main__":
     while True:
         ai.speech_to_text()
 
-# Task 1: Ensuring that the bot will be activated by speaking its name
+""" 
+--- Feature 2. Wake Word Activation Feature ---
+"""
 def wake_up(self, text):
     return True if self.name in text.lower() else False
 
-
-# Task 2: Giving Nova the ability to recognize its name
 """ 
---- Name Recognition Feature ---
+--- Feature 3. Name Recognition Feature ---
 """
 @staticmethod
 def text_to_speech(text):
@@ -59,15 +59,16 @@ if __name__ == "__main__":
          ai.text_to_speech(res)
          
          
-# Task 3: Enabling Nova to provide the current time when asked by the user
+""" 
+--- Feature 4. Time Inquiry Feature ---
+"""
 @staticmethod
 def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
 
 
-# Task 3.1: Enabling Nova to tell and predict the weather
 """ 
---- Weather Prediction Feature (Testing Phase) ---
+--- Feature 5. Weather Prediction Feature (Testing Phase) ---
 """
 @staticmethod
 def Gen_report(C):
@@ -90,10 +91,8 @@ def Gen_report(C):
     
 Gen_report()
 
-
-# Task 4: Incorporating Natural Language Processing
 """ 
---- Natural Language Processing Feature ---
+--- Feature 6. Natural Language Processing Feature ---
 """
 if __name__ == "__main__":
     ai = Bot(name="Nova")
