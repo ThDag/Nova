@@ -67,7 +67,7 @@ def action_time():
 
 # Task 3.1: Enabling Nova to tell and predict the weather
 """ 
---- Weather Prediction Feature (Beta) ---
+--- Weather Prediction Feature (Testing Phase) ---
 """
 @staticmethod
 def Gen_report(C):
