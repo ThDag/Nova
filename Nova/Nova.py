@@ -6,23 +6,27 @@ from gtts import gTTS
 import os
 import requests
 # Initializing the AI
+client_id = 'type_your_client_id_here'
+client_key = 'type_your_client_key_here'
 
 # ---Feature 1. Speech Recognition ---
 
 class Bot():
     def __init__(self, name):
+        print('Note you will have to have client_id and client_key \nfrom houndify.com to use sound recognition(free)\nand edit Nova.py file to add them')
         print("----- Initializing", name)
         self.name = name
 
     
     def speech_to_text(self):
+        global client_id, client_key
         recognizer = sr.Recognizer()
         with sr.Microphone() as mic:
             print("listening...")
             audio = recognizer.listen(mic)
         try:
-            self.text = recognizer.recognize_google(audio)
-            print("me --> ", self.text)
+            self.text = recognizer.recognize_houndify(audio_data=audio, client_key=client_key, client_id=client_id)
+            print("me --> ", self.text[0])
         except Exception as e:
             print("me -->  ERROR", e)
 # Executing Nova
