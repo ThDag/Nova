@@ -1,0 +1,6 @@
+numpy >= 1.24.3
+SpeechRecognition >= 3.10.0
+transformers >= 4.29.2
+datetime >= 5.1
+gtts >= 2.3.2
+requests >= 2.31.0
