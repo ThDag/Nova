@@ -10,6 +10,7 @@ import requests
 """ 
 ---Feature 1. Speech Recognition ---
 """
+
 class Bot():
     def __init__(self, name):
         print("----- Initializing", name)
@@ -35,12 +36,14 @@ if __name__ == "__main__":
 """ 
 --- Feature 2. Nova's Trigger Phrase ---
 """
+
 def wake_up(self, text):
     return True if self.name in text.lower() else False
 
 """ 
 --- Feature 3. Name Recognition ---
 """
+
 @staticmethod
 def text_to_speech(text):
     print("AI --> ", text)
@@ -62,6 +65,7 @@ if __name__ == "__main__":
 """ 
 --- Feature 4. Real Time Inquiry ---
 """
+
 @staticmethod
 def action_time():
     return datetime.datetime.now().time().strftime('%H:%M')
@@ -70,6 +74,7 @@ def action_time():
 """ 
 --- Feature 5. Weather Prediction (Testing Phase) ---
 """
+
 @staticmethod
 def Gen_report(C):
     recognizer = sr.Recognizer()
@@ -94,6 +99,7 @@ Gen_report()
 """ 
 --- Feature 6. Natural Language Processing ---
 """
+
 if __name__ == "__main__":
     ai = Bot(name="Nova")
     nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium")
