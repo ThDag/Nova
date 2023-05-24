@@ -23,8 +23,8 @@ class Bot():
         try:
             self.text = recognizer.recognize_google(audio)
             print("me --> ", self.text)
-        except:
-            print("me -->  ERROR")
+        except Exception as e:
+            print("me -->  ERROR", e)
 # Executing Nova
 if __name__ == "__main__":
     ai = Bot(name="Nova")
