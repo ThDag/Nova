@@ -9,7 +9,7 @@ import requests
 
 # ---Feature 1. Speech Recognition ---
 
-class Bot():
+class Nova():
     def __init__(self, name):
         print("----- Initializing", name)
         self.name = name
@@ -27,7 +27,7 @@ class Bot():
             print("me -->  ERROR")
 # Executing Nova
 if __name__ == "__main__":
-    ai = Bot(name="Nova")
+    ai = Nova(name="Nova")
     while True:
         ai.speech_to_text()
 
@@ -47,7 +47,7 @@ def text_to_speech(text):
     os.remove("res.mp3")
 
 if __name__ == "__main__":
-     ai = Bot(name="Nova")
+     ai = Nova(name="Nova")
      while True:
          ai.speech_to_text()
          ## wake up
@@ -87,7 +87,7 @@ Gen_report()
 # --- Feature 6. Natural Language Processing ---
 
 if __name__ == "__main__":
-    ai = Bot(name="Nova")
+    ai = Nova(name="Nova")
     nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium")
     os.environ["TOKENIZERS_PARALLELISM"] = "true"
     ex=True
@@ -112,6 +112,6 @@ if __name__ == "__main__":
             else:
                 chat = nlp(transformers.Conversation(ai.text), pad_token_id=50256)
                 res = str(chat)
-                res = res[res.find("bot >> ")+6:].strip()
+                res = res[res.find("Nova >> ")+6:].strip()
         ai.text_to_speech(res)
     print("----- Shutting Down-----")
