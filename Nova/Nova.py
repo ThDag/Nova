@@ -13,7 +13,7 @@ class Bot():
         self.name = name
     # Setting up the Speech recognition system
     """ 
---- Standard Feature ---
+--- Speech Recognition Feature ---
     """
     
     def speech_to_text(self):
@@ -39,7 +39,7 @@ def wake_up(self, text):
 
 # Task 2: Giving Nova the ability to recognize its name
 """ 
---- Standard Feature ---
+--- Name Recognition Feature ---
 """
 @staticmethod
 def text_to_speech(text):
@@ -67,7 +67,7 @@ def action_time():
 
 # Task 3.1: Enabling Nova to tell and predict the weather
 """ 
---- Test Feature ---
+--- Weather Prediction Feature (Beta) ---
 """
 @staticmethod
 def Gen_report(C):
@@ -93,7 +93,7 @@ Gen_report()
 
 # Task 4: Incorporating Natural Language Processing
 """ 
---- Standard Feature ---
+--- Natural Language Processing Feature ---
 """
 if __name__ == "__main__":
     ai = Bot(name="Nova")
