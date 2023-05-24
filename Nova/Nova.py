@@ -8,7 +8,7 @@ import requests
 # Initializing the AI
 
 """ 
----Feature 1. Speech Recognition Feature ---
+---Feature 1. Speech Recognition ---
 """
 class Bot():
     def __init__(self, name):
@@ -33,13 +33,13 @@ if __name__ == "__main__":
         ai.speech_to_text()
 
 """ 
---- Feature 2. Wake Word Activation Feature ---
+--- Feature 2. Nova's Trigger Phrase ---
 """
 def wake_up(self, text):
     return True if self.name in text.lower() else False
 
 """ 
---- Feature 3. Name Recognition Feature ---
+--- Feature 3. Name Recognition ---
 """
 @staticmethod
 def text_to_speech(text):
@@ -60,7 +60,7 @@ if __name__ == "__main__":
          
          
 """ 
---- Feature 4. Time Inquiry Feature ---
+--- Feature 4. Real Time Inquiry ---
 """
 @staticmethod
 def action_time():
@@ -68,7 +68,7 @@ def action_time():
 
 
 """ 
---- Feature 5. Weather Prediction Feature (Testing Phase) ---
+--- Feature 5. Weather Prediction (Testing Phase) ---
 """
 @staticmethod
 def Gen_report(C):
@@ -92,7 +92,7 @@ def Gen_report(C):
 Gen_report()
 
 """ 
---- Feature 6. Natural Language Processing Feature ---
+--- Feature 6. Natural Language Processing ---
 """
 if __name__ == "__main__":
     ai = Bot(name="Nova")
