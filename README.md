@@ -28,4 +28,4 @@ To make the most of Nova, consider the following tips:
 2. Use proper punctuation and grammar in text inputs to improve the accuracy of Nova's responses.
 3. Engage in meaningful and contextually relevant conversations to leverage Nova's advanced understanding capabilities.
 4. When instructing Nova to remember a name, clearly mention the name in a structured format to improve recall accuracy.
-5. Run pip intall -r requirements.txt to install all the modules needed.
+5. Run `pip intall -r requirements.txt` to install all the modules needed.
